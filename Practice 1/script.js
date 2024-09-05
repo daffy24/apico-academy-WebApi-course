@@ -1,6 +1,6 @@
 class Api {
     constructor() {
-        this.apiKey = '27ea0ceb9dc161fded259817f0bfb236'; // Замініть на ваш API ключ
+        this.apiKey = '27ea0ceb9dc161fded259817f0bfb236'; 
         this.baseUrl = 'https://api.themoviedb.org/3';
     }
 
@@ -16,12 +16,12 @@ class Api {
 
 async function renderPopularMovies() {
     const loadingElement = document.getElementById('loading');
-    loadingElement.style.display = 'block'; // Показати текст "Loading"
+    loadingElement.style.display = 'block'; 
 
     const api = new Api();
     try {
         const movies = await api.fetchPopularMovies();
-        loadingElement.remove(); // Приховати текст "Loading"
+        loadingElement.remove(); 
 
         const movieListElement = document.getElementById('movie-list');
         movies.forEach(movie => {
@@ -45,5 +45,5 @@ async function renderPopularMovies() {
     }
 }
 
-// Виклик функції для рендерингу фільмів
+
 renderPopularMovies();
